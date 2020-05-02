@@ -34,6 +34,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     // 各セルを選択した時に実行されるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "cellSegue",sender: nil) // ←追加する
+        
     }
 
     // セルが削除が可能なことを伝えるメソッド
