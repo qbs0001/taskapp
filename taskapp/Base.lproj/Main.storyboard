@@ -85,7 +85,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-di-XlT">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-di-XlT" userLabel="Title Text Field">
                                 <rect key="frame" x="10" y="129" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -138,7 +138,7 @@
                     <connections>
                         <outlet property="contentsTextView" destination="7wL-T1-TaT" id="FiS-12-Y4H"/>
                         <outlet property="datePicker" destination="s8Y-fB-FIA" id="57N-ES-fAi"/>
-                        <outlet property="titleTextfield" destination="VNr-di-XlT" id="niz-6P-6yf"/>
+                        <outlet property="titleTextField" destination="VNr-di-XlT" id="LHa-A2-Cuk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdX-tL-Z3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,6 +165,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qsU-qA-Iep"/>
+        <segue reference="FM3-b7-Ddh"/>
     </inferredMetricsTieBreakers>
 </document>
