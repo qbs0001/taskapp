@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: true)
     
     // カテゴリでフィルタした結果が格納されるリスト。
-    var filterTasks = try! Realm().objects(Task.self)
+    // var filterTasks = try! Realm().objects(Task.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +53,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // 検索ワードを格納
         let searchText = searchController.searchBar.text!
         
-        // キーワード一致した結果のみリストに格納
-        filterTasks = taskArray.filter("category LIKE %@", "*" + searchText + "*")
+        // 検索バーが更新される度に、Taskを読み込み
+        taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: true)
+        
+        // キーワードが入力されている場合は、キーワード一致した結果のみリストに格納
+        if searchText != "" {
+            taskArray = taskArray.filter("category LIKE %@", "*" + searchText + "*")
+        }
         
         // テーブルビューを再読み込みする。
         tableView.reloadData()
@@ -62,13 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // データの数（＝セルの数）を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 検索している場合
-        if searchController.searchBar.text != "" {
-            return filterTasks.count
-            // 検索していない場合
-        } else {
-            return taskArray.count // ←修正する
-        }
+        return taskArray.count
     }
     
     // 各セルの内容を返すメソッド
@@ -84,13 +83,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let label2 = cell.viewWithTag(2) as! UILabel
         let label3 = cell.viewWithTag(3) as! UILabel
         
-        // 検索している場合
-        if searchController.searchBar.text != "" {
-            task = filterTasks[indexPath.row]
-            // 検索していない場合
-        } else {
-            task = taskArray[indexPath.row]
-        }
+        task = taskArray[indexPath.row]
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
