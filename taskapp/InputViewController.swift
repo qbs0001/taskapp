@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import RealmSwift    // 追加する
-import UserNotifications    // 追加
+import RealmSwift
+import UserNotifications
 
 class InputViewController: UIViewController {
 
@@ -20,8 +20,8 @@ class InputViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    let realm = try! Realm()    // 追加する
-    var task: Task!   // 追加する
+    let realm = try! Realm()
+    var task: Task!
     
     
     override func viewDidLoad() {
@@ -46,15 +46,16 @@ class InputViewController: UIViewController {
             self.task.title = self.titleTextField.text!
             self.task.contents = self.contentsTextView.text
             self.task.date = self.datePicker.date
+            //カテゴリを設定
             self.task.category = self.categoryTextField.text!
             self.realm.add(self.task, update: .modified)
         }
 
-        setNotification(task: task)   // 追加
+        setNotification(task: task)
         super.viewWillDisappear(animated)
     }
     
-    // タスクのローカル通知を登録する --- ここから ---
+    // タスクのローカル通知を登録する
      func setNotification(task: Task) {
          let content = UNMutableNotificationContent()
          // タイトルと内容を設定(中身がない場合メッセージ無しで音だけの通知になるので「(xxなし)」を表示する)
@@ -92,7 +93,7 @@ class InputViewController: UIViewController {
                  print("---------------/")
              }
          }
-     } // --- ここまで追加 ---
+     }
     
     @objc func dismissKeyboard(){
         // キーボードを閉じる

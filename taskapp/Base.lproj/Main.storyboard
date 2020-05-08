@@ -33,13 +33,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7h-rB-Ea1">
-                                                    <rect key="frame" x="20" y="76" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="75.5" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6S-ti-C4G">
-                                                    <rect key="frame" x="20" y="45.5" width="374" height="20.5"/>
+                                                    <rect key="frame" x="20" y="45.5" width="374" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -97,24 +97,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrZ-da-dMX">
-                                <rect key="frame" x="10" y="98" width="394" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-di-XlT" userLabel="Title Text Field">
-                                <rect key="frame" x="10" y="129" width="394" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-08-iyH">
                                 <rect key="frame" x="10" y="173" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-di-XlT" userLabel="Title Text Field">
+                                <rect key="frame" x="10" y="204" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-08-iyH">
+                                <rect key="frame" x="10" y="248" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7wL-T1-TaT">
-                                <rect key="frame" x="10" y="204" width="394" height="120"/>
+                                <rect key="frame" x="10" y="279" width="394" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="lkE-U4-T4V"/>
@@ -125,19 +125,19 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="s8Y-fB-FIA">
-                                <rect key="frame" x="0.0" y="334" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="409" width="414" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="zbN-II-Ldv"/>
                                 </constraints>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-kY-bnA">
-                                <rect key="frame" x="10" y="464" width="394" height="21"/>
+                                <rect key="frame" x="10" y="98" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kly-vV-L4V">
-                                <rect key="frame" x="10" y="495" width="394" height="34"/>
+                                <rect key="frame" x="10" y="129" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -147,16 +147,17 @@
                             <constraint firstItem="6ar-Ov-kDK" firstAttribute="trailing" secondItem="VNr-di-XlT" secondAttribute="trailing" constant="10" id="0SB-Qq-ZEj"/>
                             <constraint firstItem="6ar-Ov-kDK" firstAttribute="trailing" secondItem="Kly-vV-L4V" secondAttribute="trailing" constant="10" id="92n-Pg-iND"/>
                             <constraint firstItem="6ar-Ov-kDK" firstAttribute="trailing" secondItem="s8Y-fB-FIA" secondAttribute="trailing" id="Aar-OL-Vwf"/>
+                            <constraint firstItem="GrZ-da-dMX" firstAttribute="top" secondItem="Kly-vV-L4V" secondAttribute="bottom" constant="10" id="Cxb-Hf-Rbd"/>
                             <constraint firstItem="VNr-di-XlT" firstAttribute="top" secondItem="GrZ-da-dMX" secondAttribute="bottom" constant="10" id="GUP-qK-CGZ"/>
                             <constraint firstItem="6ar-Ov-kDK" firstAttribute="trailing" secondItem="7wL-T1-TaT" secondAttribute="trailing" constant="10" id="GhS-Wu-TCw"/>
                             <constraint firstItem="7wL-T1-TaT" firstAttribute="top" secondItem="3KV-08-iyH" secondAttribute="bottom" constant="10" id="KhA-QY-hlJ"/>
                             <constraint firstItem="VNr-di-XlT" firstAttribute="leading" secondItem="6ar-Ov-kDK" secondAttribute="leading" constant="10" id="Lqy-Rw-vKC"/>
+                            <constraint firstItem="9bb-kY-bnA" firstAttribute="top" secondItem="6ar-Ov-kDK" secondAttribute="top" constant="10" id="MBF-Vp-mC2"/>
                             <constraint firstItem="3KV-08-iyH" firstAttribute="leading" secondItem="6ar-Ov-kDK" secondAttribute="leading" constant="10" id="RgS-za-OpL"/>
-                            <constraint firstItem="9bb-kY-bnA" firstAttribute="top" secondItem="s8Y-fB-FIA" secondAttribute="bottom" constant="10" id="WgG-6P-WLV"/>
                             <constraint firstItem="Kly-vV-L4V" firstAttribute="leading" secondItem="6ar-Ov-kDK" secondAttribute="leading" constant="10" id="XxA-Yi-8wQ"/>
+                            <constraint firstItem="s8Y-fB-FIA" firstAttribute="top" secondItem="7wL-T1-TaT" secondAttribute="bottom" constant="10" id="a25-UB-Ra4"/>
                             <constraint firstItem="Kly-vV-L4V" firstAttribute="top" secondItem="9bb-kY-bnA" secondAttribute="bottom" constant="10" id="bu3-Q5-5XS"/>
                             <constraint firstItem="7wL-T1-TaT" firstAttribute="leading" secondItem="6ar-Ov-kDK" secondAttribute="leading" constant="10" id="c6y-Mx-7VU"/>
-                            <constraint firstItem="s8Y-fB-FIA" firstAttribute="top" secondItem="7wL-T1-TaT" secondAttribute="bottom" constant="10" id="dbD-az-cCG"/>
                             <constraint firstItem="6ar-Ov-kDK" firstAttribute="trailing" secondItem="GrZ-da-dMX" secondAttribute="trailing" constant="10" id="eLK-5F-JDB"/>
                             <constraint firstItem="GrZ-da-dMX" firstAttribute="leading" secondItem="6ar-Ov-kDK" secondAttribute="leading" constant="10" id="gt7-dQ-0wv"/>
                             <constraint firstItem="6ar-Ov-kDK" firstAttribute="trailing" secondItem="3KV-08-iyH" secondAttribute="trailing" constant="10" id="iQc-4Y-bDW"/>
@@ -164,7 +165,6 @@
                             <constraint firstItem="9bb-kY-bnA" firstAttribute="leading" secondItem="6ar-Ov-kDK" secondAttribute="leading" constant="10" id="lkW-rf-Mlo"/>
                             <constraint firstItem="s8Y-fB-FIA" firstAttribute="leading" secondItem="6ar-Ov-kDK" secondAttribute="leading" id="rFn-K5-qjW"/>
                             <constraint firstItem="6ar-Ov-kDK" firstAttribute="trailing" secondItem="9bb-kY-bnA" secondAttribute="trailing" constant="10" id="w15-e7-Y7F"/>
-                            <constraint firstItem="GrZ-da-dMX" firstAttribute="top" secondItem="6ar-Ov-kDK" secondAttribute="top" constant="10" id="zBS-Og-IU7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6ar-Ov-kDK"/>
                     </view>
