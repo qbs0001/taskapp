@@ -33,23 +33,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskArray.count  // ←修正する
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 95
+    }
 
     // 各セルの内容を返すメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
+        
+        //Tag番号でセルに含まれるラベルを取得する。
+        let label1 = cell.viewWithTag(1) as! UILabel
+        let label2 = cell.viewWithTag(2) as! UILabel
+        let label3 = cell.viewWithTag(3) as! UILabel
+        
         // Cellに値を設定する.  --- ここから ---
         let task = taskArray[indexPath.row]
-        cell.textLabel?.text = task.title
-        
-        cell.detailTextLabel?.text = task.category
-
+//        cell.textLabel?.text = task.title
+//
+//        cell.detailTextLabel?.text = task.category
+//
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
 
         let dateString:String = formatter.string(from: task.date)
-        cell.detailTextLabel?.text = dateString
+//        cell.detailTextLabel?.text = dateString
+        
+        //ラベルに値を設定する。
+        label1.text = "カテゴリ : " + task.category
+        label2.text = "タイトル : " + task.title
+        label3.text = "日時　　 : " + dateString
+        
+        
         // --- ここまで追加 ---
         
         return cell
